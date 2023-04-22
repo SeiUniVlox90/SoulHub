@@ -75,7 +75,7 @@ local function FFOJIO_fake_script() -- Main.LocalScript
 		wait(1)
 		Msg.Text = "Destroying In 1"
 		wait(1)
-		loadstring(game:HttpGet((""), true))()
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/SeiUniVlox90/SoulHub/main/SoulStart"), true))()
 		Main.Visible = false
 	end)
 end
