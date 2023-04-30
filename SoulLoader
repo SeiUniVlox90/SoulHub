@@ -1,82 +1,110 @@
-local Loader = Instance.new("ScreenGui")
+local SoulKey = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
+local Key = Instance.new("TextBox")
+local Get = Instance.new("TextButton")
+local Sub = Instance.new("TextButton")
+local Discord = Instance.new("TextButton")
+local Logo = Instance.new("TextLabel")
 local TextLabel = Instance.new("TextLabel")
-local Start = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
-local Msg = Instance.new("TextLabel")
-local UICorner_2 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
 
-Loader.Name = "Loader"
-Loader.Parent = game.CoreGui
-Loader.ResetOnSpawn = false
+SoulKey.Name = "SoulKey"
+SoulKey.Parent = game.CoreGui
+SoulKey.ResetOnSpawn = false
 
 Main.Name = "Main"
-Main.Parent = Loader
-Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-Main.BorderColor3 = Color3.fromRGB(255, 0, 4)
-Main.BorderSizePixel = 3
-Main.Position = UDim2.new(0.5, -173, 0.5, -108)
-Main.Size = UDim2.new(0, 346, 0, 217)
+Main.Parent = SoulKey
+Main.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Main.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Main.BorderSizePixel = 2
+Main.Position = UDim2.new(0.377398729, -50, 0.44979918, -50)
+Main.Size = UDim2.new(0, 330, 0, 149)
 Main.Active = true
 
-TextLabel.Parent = Main
+Key.Name = "Key"
+Key.Parent = Main
+Key.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Key.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Key.BorderSizePixel = 2
+Key.Position = UDim2.new(0.318181813, 0, 0.114093959, 0)
+Key.Size = UDim2.new(0, 212, 0, 37)
+Key.Font = Enum.Font.GothamBold
+Key.Text = "Key Here=="
+Key.TextColor3 = Color3.fromRGB(255, 255, 255)
+Key.TextSize = 14.000
+
+Get.Name = "Get"
+Get.Parent = Main
+Get.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Get.BorderColor3 = Color3.fromRGB(255, 0, 4)
+Get.BorderSizePixel = 2
+Get.Position = UDim2.new(0.0272727273, 0, 0.483221382, 0)
+Get.Size = UDim2.new(0, 152, 0, 28)
+Get.Font = Enum.Font.GothamBold
+Get.Text = "GET KEY"
+Get.TextColor3 = Color3.fromRGB(255, 255, 255)
+Get.TextSize = 14.000
+Get.MouseButton1Click:Connect(function()
+	setclipboard("https://controlc.com/f61cd276")
+end)
+
+Sub.Name = "Sub"
+Sub.Parent = Main
+Sub.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Sub.BorderColor3 = Color3.fromRGB(26, 255, 0)
+Sub.BorderSizePixel = 2
+Sub.Position = UDim2.new(0.51177609, 0, 0.480920672, 0)
+Sub.Size = UDim2.new(0, 152, 0, 28)
+Sub.Font = Enum.Font.GothamBold
+Sub.Text = "SUBMIT"
+Sub.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sub.TextSize = 14.000
+Sub.MouseButton1Click:Connect(function()
+	if Key.Text == "U1cAFgqgyyIFGMwtFz8riILLnR6o2Ui6BT4VV63tN7ao7LnSgo" then
+		Main.Visible = true
+		wait(1)
+		loadstring(game:httpGet(""))()
+	end
+end)
+
+Discord.Name = "Discord"
+Discord.Parent = Main
+Discord.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Discord.BorderColor3 = Color3.fromRGB(30, 0, 255)
+Discord.BorderSizePixel = 2
+Discord.Position = UDim2.new(0.0272727273, 0, 0.715820014, 0)
+Discord.Size = UDim2.new(0, 312, 0, 30)
+Discord.Font = Enum.Font.GothamBold
+Discord.Text = "DISCORD"
+Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
+Discord.TextSize = 14.000
+
+Logo.Name = "Logo"
+Logo.Parent = Main
+Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Logo.BackgroundTransparency = 1.000
+Logo.Position = UDim2.new(0.0393939391, 0, 0.114093959, 0)
+Logo.Size = UDim2.new(0, 64, 0, 35)
+Logo.Font = Enum.Font.GothamBold
+Logo.Text = "SOUL"
+Logo.TextColor3 = Color3.fromRGB(255, 0, 4)
+Logo.TextSize = 14.000
+
+TextLabel.Parent = Logo
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.210982665, 0, 0, 0)
-TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Position = UDim2.new(0.470019341, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 55, 0, 30)
 TextLabel.Font = Enum.Font.GothamBold
-TextLabel.Text = "SOUL_LOADER"
-TextLabel.TextColor3 = Color3.fromRGB(255, 0, 4)
-TextLabel.TextSize = 20.000
+TextLabel.Text = "HUB"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 10.000
 
-Start.Name = "Start"
-Start.Parent = Main
-Start.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Start.Position = UDim2.new(0.144508675, 0, 0.741935432, 0)
-Start.Size = UDim2.new(0, 245, 0, 42)
-Start.Font = Enum.Font.GothamBold
-Start.Text = "Load The Gui"
-Start.TextColor3 = Color3.fromRGB(255, 255, 255)
-Start.TextSize = 15.000
-
-UICorner.Parent = Start
-
-Msg.Name = "Msg"
-Msg.Parent = Main
-Msg.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Msg.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Msg.BorderSizePixel = 0
-Msg.Position = UDim2.new(0.14161849, 0, 0.276497692, 0)
-Msg.Size = UDim2.new(0, 246, 0, 84)
-Msg.Font = Enum.Font.GothamBold
-Msg.Text = "N/A"
-Msg.TextColor3 = Color3.fromRGB(255, 255, 255)
-Msg.TextSize = 20.000
-
-UICorner_2.Parent = Msg
-
--- Scripts:
-
-local function FFOJIO_fake_script() -- Main.LocalScript 
-	local script = Instance.new('LocalScript', Main)
-
-	local Msg = script.Parent.Msg
-	local Start = script.Parent.Start
-	local Main = script.Parent
-	
-	Msg.Text = "Continue?"
-	
-	Start.MouseButton1Click:Connect(function()
-		Msg.Text = "Loading Gui"
-		wait(5)
-		Msg.Text = "Destroying In 3"
-		wait(1)
-		Msg.Text = "Destroying In 2"
-		wait(1)
-		Msg.Text = "Destroying In 1"
-		wait(1)
-		loadstring(game:HttpGet(("https://raw.githubusercontent.com/SeiUniVlox90/SoulHub/main/SoulStart"), true))()
-		Main.Visible = false
-	end)
-end
-coroutine.wrap(FFOJIO_fake_script)()
+TextLabel_2.Parent = Logo
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.235644341, 0, 0.457142889, 0)
+TextLabel_2.Size = UDim2.new(0, 55, 0, 30)
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "SOUL HUB FREE"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
