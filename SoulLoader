@@ -45,6 +45,12 @@ Get.Text = "GET KEY"
 Get.TextColor3 = Color3.fromRGB(255, 255, 255)
 Get.TextSize = 14.000
 Get.MouseButton1Click:Connect(function()
+	game.StarterGui:SetCore("SendNotification", {
+        Title = "Soul_Key";
+        Text = "Copy On Clipboard";
+        Duration = "3";
+        })
+        wait(0.5)
 	setclipboard("https://controlc.com/f61cd276")
 end)
 
